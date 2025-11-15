@@ -12,10 +12,10 @@ const PartnerSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8]">
-              Fuel The
+              Be A
               <br/>
               <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 via-pink-500 to-orange-500">
-                Movement
+              Partner
               </span>
             </h2>
             <p className="max-w-2xl text-lg md:text-xl text-gray-400 mt-8 font-medium">

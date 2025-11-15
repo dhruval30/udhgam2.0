@@ -20,7 +20,7 @@ const AgendaSection = () => {
           <div className="lg:col-span-5 flex flex-col gap-6 order-2 lg:order-1 relative">
              
              <div className="absolute -top-10 left-0 md:-left-4 rotate-[-4deg] bg-[#E60000] text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest border border-red-400 shadow-[4px_4px_0px_rgba(255,255,255,0.2)] z-20 hidden lg:block">
-                Confidential • Declassifying Soon
+                Coming Soon
              </div>
 
              <div className="flex items-center gap-3 mb-2 pt-4 lg:pt-0">
