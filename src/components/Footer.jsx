@@ -1,7 +1,10 @@
+import { ValidationError, useForm } from '@formspree/react';
 import { ArrowRight, Heart } from 'lucide-react';
 import React from 'react';
 
 const Footer = () => {
+  const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
+  const [state, handleSubmit] = useForm(formspreeId);
   return (
     <footer
       id="contact"
@@ -65,29 +68,41 @@ const Footer = () => {
           </div>
           <div className="lg:col-span-5 flex flex-col gap-3">
             <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-widest">Questions?</h3>
-            <form className="flex flex-col gap-3 max-w-lg">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                className="w-full h-12 bg-[#111] border border-white/20 rounded-lg px-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                required
-                rows="4"
-                className="w-full bg-[#111] border border-white/20 rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
-              />
-              <button
-                type="submit"
-                className="h-12 w-full flex items-center justify-center gap-2 bg-white text-black rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-gray-200 transition-colors"
-              >
-                <span>Send Message</span>
-                <ArrowRight size={18} />
-              </button>
-            </form>
+
+            {state.succeeded ? (
+              <p className="text-green-400 text-lg font-medium">Thank you! We’ll get back to you soon.</p>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-lg">
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  className="w-full h-12 bg-[#111] border border-white/20 rounded-lg px-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
+                />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                  rows="4"
+                  className="w-full bg-[#111] border border-white/20 rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"
+                />
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="h-12 w-full flex items-center justify-center gap-2 bg-white text-black rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-gray-200 transition-colors"
+                >
+                  <span>{state.submitting ? "Sending..." : "Send Message"}</span>
+                  <ArrowRight size={18} />
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
