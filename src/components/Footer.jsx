@@ -46,8 +46,6 @@ const Footer = () => {
               <div className="flex flex-col gap-1">
                 <a href="https://www.instagram.com/udhgam2025/" className="text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.linkedin.com/posts/woxsen-university_udhgam-activity-7295649138023534592-Fss3/" className="text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                {/* <a href="udhgam@woxsen.edu.in" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Mail</a> */}
-                {/* <a href="#" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Youtube</a> */}
               </div>
             </div>
           </div>
@@ -61,10 +59,22 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Udhgam. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-sm text-gray-400 font-medium">
-              <span>Made with</span>
-              <Heart size={14} className="text-red-500" fill="currentColor" />
-            </div>
+            <div 
+  className="group flex items-center gap-2 text-sm text-gray-400 font-medium cursor-help 
+             transition-all duration-300 ease-out hover:text-gray-300"
+  title="Built by Dhruval"
+>
+  <span className="transition-transform duration-300 group-hover:-translate-y-[1px]">
+    Made with
+  </span>
+
+  <Heart 
+    size={14} 
+    className="text-red-500 fill-current transition-transform duration-300 ease-out 
+               group-hover:scale-110"
+  />
+</div>
+
           </div>
           <div className="lg:col-span-5 flex flex-col gap-3">
             <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-widest">Questions?</h3>
