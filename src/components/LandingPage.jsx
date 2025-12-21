@@ -19,7 +19,7 @@ const LandingPage = () => {
         <img
           src={BG_IMAGE_PATH}
           alt="Background"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-linear-to-b from-black/80 via-transparent to-black/90"></div>
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
