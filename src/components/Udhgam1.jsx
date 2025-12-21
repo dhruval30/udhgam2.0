@@ -6,31 +6,31 @@ const slides = [
     id: 1,
     image: '/udhgam-admin.jpeg',
     title: 'The Hype',
-    desc: 'The screens lit up and the campus buzzed. It wasn’t just an event launch; it was the moment everyone knew something big was about to go down.',
+    desc: 'When the screens lit up, the energy shifted. It wasn’t just an announcement, it was the moment Udhgam officially began.',
   },
   {
     id: 2,
     image: '/inaugration.jpeg',
     title: 'Big Talks',
-    desc: 'The atrium went quiet when the pros spoke. No boring lectures here—just real stories from people who have actually built crazy cool stuff.',
+    desc: 'Industry professionals shared real experiences and insights. Honest conversations, practical takeaways, and stories worth listening to.',
   },
   {
     id: 3,
     image: '/classroom2.jpeg',
     title: 'Code Mode',
-    desc: 'Pizza, energy drinks, and zero sleep. The classrooms turned into battlegrounds where teams raced against the clock to ship the next big app.',
+    desc: 'Teams settled in, ideas took shape, and the focus was intense. Long hours, quick iterations, and a shared goal to build something meaningful.',
   },
   {
     id: 4,
     image: '/classroom.jpeg',
     title: 'Level Up',
-    desc: 'We didn’t just sit and listen; we built things. The workshops were jam-packed sessions where ideas flew around and everyone learned something new.',
+    desc: 'The workshops were interactive and hands-on. Participants explored new concepts, asked questions, and walked away with skills they could actually use.',
   },
   {
     id: 5,
     image: '/inaugration1.jpeg',
     title: 'Full House',
-    desc: 'Just look at that crowd! We packed the place. The energy was electric, the music was loud, and the vibes were absolutely unmatched.',
+    desc: 'A packed venue, high energy, and an engaged crowd. The atmosphere captured exactly what Udhgam stands for — curiosity, collaboration, and community.',
   },
 ];
 

@@ -77,8 +77,8 @@ const AboutSection = () => {
                         
                         <div className="mt-6 sm:mt-8">
                             <p className="text-[10px] sm:text-xs font-bold tracking-widest uppercase text-gray-400 mb-2">Contact Team</p>
-                            <a href="mailto:codex@woxsen.edu.in" className="text-base sm:text-lg font-bold underline decoration-2 underline-offset-4 hover:text-purple-600 transition-colors break-all text-black">
-                                codex@woxsen.edu.in
+                            <a href="mailto:udhgam@woxsen.edu.in" className="text-base sm:text-lg font-bold underline decoration-2 underline-offset-4 hover:text-purple-600 transition-colors break-all text-black">
+                                udhgam@woxsen.edu.in
                             </a>
                         </div>
                     </div>

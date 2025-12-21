@@ -92,7 +92,7 @@ const AgendaSection = () => {
           <div className="lg:col-span-7 flex flex-col order-1 lg:order-2">
             <div className="relative mb-12 lg:text-right">
                 <div className="lg:hidden absolute -top-8 right-0 rotate-[4deg] bg-[#E60000] text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest border border-red-400 shadow-[4px_4px_0px_rgba(255,255,255,0.2)] z-20">
-                    Confidential
+                    Coming Soon
                 </div>
 
                 <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8]">
@@ -133,7 +133,7 @@ const AgendaSection = () => {
                             <Lock size={24} />
                         </div>
                         <h3 className="text-xl font-bold text-white uppercase tracking-tight">Locked Access</h3>
-                        <p className="text-sm text-gray-400 mt-2 max-w-[200px]">Full detailed timeline drops in <span className="text-white font-bold">2 weeks</span>.</p>
+                        <p className="text-sm text-gray-400 mt-2 max-w-[200px]">Full detailed timeline drops <span className="text-white font-bold">soon</span>.</p>
                     </div>
                 </div>
 

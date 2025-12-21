@@ -1,4 +1,5 @@
-import { ArrowRight, Facebook, Instagram, Menu, Twitter, X, Youtube } from 'lucide-react';
+import { ArrowRight, Instagram, Linkedin, Menu, X } from 'lucide-react';
+
 import React, { useState } from 'react';
 
 const BG_IMAGE_PATH = '/bg.png';
@@ -79,27 +80,50 @@ const LandingPage = () => {
         </div>
 
         <div className="mt-auto px-8 pb-12">
-            <p className="text-xs font-bold text-gray-500 uppercase mb-4 tracking-widest">Connect with us</p>
+            {/* <p className="text-xs font-bold text-gray-500 uppercase mb-4 tracking-widest">Connect with us</p> */}
+            <div className="mt-auto px-8 pb-12">
+
             <div className="flex border border-white/20 divide-x divide-white/20">
-                {[Instagram, Facebook, Twitter, Youtube].map((Icon, index) => (
-                    <a key={index} href="#" className="flex-1 py-4 flex justify-center items-center hover:bg-white/10 text-white transition-colors">
-                        <Icon size={20} />
-                    </a>
-                ))}
+              <a
+                href="https://www.instagram.com/udhgam2025/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-4 flex justify-center items-center hover:bg-white/10 text-white transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/posts/woxsen-university_udhgam-activity-7295649138023534592-Fss3/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-4 flex justify-center items-center hover:bg-white/10 text-white transition-colors"
+              >
+                <Linkedin size={20} />
+              </a>
             </div>
+          </div>
         </div>
       </div>
 
       <div className="absolute left-8 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-0">
-        {[Instagram, Facebook, Twitter, Youtube].map((Icon, index) => (
-          <a 
-            key={index} 
-            href="#" 
-            className="w-12 h-12 flex items-center justify-center border border-white/20 text-white/60 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
-          >
-            <Icon size={18} />
-          </a>
-        ))}
+        <a
+          href="https://www.instagram.com/udhgam2025/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 flex items-center justify-center border border-white/20 text-white/60 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
+        >
+          <Instagram size={18} />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/posts/woxsen-university_udhgam-activity-7295649138023534592-Fss3/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 flex items-center justify-center border border-white/20 text-white/60 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
+        >
+          <Linkedin size={18} />
+        </a>
       </div>
 
       <div className="absolute z-30 top-20 right-6 flex flex-col items-end text-right md:top-1/2 md:right-12 md:-translate-y-1/2">

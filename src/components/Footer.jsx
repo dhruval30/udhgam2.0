@@ -31,10 +31,10 @@ const Footer = () => {
             <div>
               <h3 className="text-xs font-bold tracking-[0.25em] uppercase text-purple-400 mb-2">Contact</h3>
               <a
-                href="mailto:codex@woxsen.edu.in"
+                href="mailto:udhgam@woxsen.edu.in"
                 className="text-lg text-gray-200 break-all hover:text-purple-400 transition-colors"
               >
-                codex@woxsen.edu.in
+                udhgam@woxsen.edu.in
               </a>
             </div>
             <div>
@@ -44,10 +44,10 @@ const Footer = () => {
             <div>
               <h3 className="text-xs font-bold tracking-[0.25em] uppercase text-purple-400 mb-2">Stalk Us</h3>
               <div className="flex flex-col gap-1">
-                <a href="#" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Instagram</a>
-                <a href="#" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Twitter (X)</a>
-                <a href="#" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Facebook</a>
-                <a href="#" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Youtube</a>
+                <a href="https://www.instagram.com/udhgam2025/" className="text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/posts/woxsen-university_udhgam-activity-7295649138023534592-Fss3/" className="text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                {/* <a href="udhgam@woxsen.edu.in" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Mail</a> */}
+                {/* <a href="#" className="text-lg text-gray-200 hover:text-purple-400 transition-colors">Youtube</a> */}
               </div>
             </div>
           </div>
