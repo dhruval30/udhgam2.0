@@ -60,21 +60,18 @@ const Footer = () => {
               © {new Date().getFullYear()} Udhgam. All rights reserved.
             </p>
             <div 
-  className="group flex items-center gap-2 text-sm text-gray-400 font-medium cursor-help 
-             transition-all duration-300 ease-out hover:text-gray-300"
-  title="Built by Dhruval"
->
-  <span className="transition-transform duration-300 group-hover:-translate-y-[1px]">
-    Made with
-  </span>
+              className="group flex items-center gap-2 text-sm text-gray-400 font-medium cursor-help transition-all duration-300 ease-out hover:text-gray-300"
+              title="Built by Dhruval"
+            >
+              <span className="transition-transform duration-300 group-hover:-translate-y-px">
+                Made with
+              </span>
 
-  <Heart 
-    size={14} 
-    className="text-red-500 fill-current transition-transform duration-300 ease-out 
-               group-hover:scale-110"
-  />
-</div>
-
+              <Heart 
+                size={14} 
+                className="text-red-500 fill-current transition-transform duration-300 ease-out group-hover:scale-110"
+              />
+            </div>
           </div>
           <div className="lg:col-span-5 flex flex-col gap-3">
             <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-widest">Questions?</h3>
