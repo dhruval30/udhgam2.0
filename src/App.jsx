@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './App.css';
 import AboutSection from './components/AboutSection';
 import AgendaSection from './components/AgendaSection';
 import Footer from './components/Footer';
@@ -8,6 +9,26 @@ import SectionDivider from './components/SectionDivider';
 import Udhgam1 from './components/Udhgam1';
 
 function App() {
+  useEffect(() => {
+    const storageType = localStorage;
+    const hasVisited = storageType.getItem('udhgam_visit_counted');
+
+    if (!hasVisited) {
+      storageType.setItem('udhgam_visit_counted', 'true');
+      fetch('https://api.counterapi.dev/v2/dhruval-padias-team-2232/first-counter-2232/up')
+        .then(response => {
+           if (!response.ok) throw new Error("Network response was not ok");
+           return response.json();
+        })
+        .then(data => {
+          console.log("Visit counted:", data);
+        })
+        .catch(err => {
+          console.error("Counter API Error:", err);
+        });
+    }
+  }, []);
+
   return (
     <div className="App">
       <LandingPage />

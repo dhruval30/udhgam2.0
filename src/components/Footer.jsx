@@ -1,10 +1,27 @@
 import { ValidationError, useForm } from '@formspree/react';
 import { ArrowRight, Heart } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Footer = () => {
   const formspreeId = import.meta.env.VITE_FORMSPREE_ID;
   const [state, handleSubmit] = useForm(formspreeId);
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleSecretClick = () => {
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+
+    if (newCount === 10) {
+      setClickCount(0); 
+      const apiKey = import.meta.env.VITE_COUNTER_API_KEY;
+      fetch('https://api.counterapi.dev/v2/dhruval-padias-team-2232/first-counter-2232')
+        .then(res => res.json())
+        .then(data => {
+          alert(`Backdoor Accessed\n\nStats:\n${JSON.stringify(data, null, 2)}`);
+        })
+        .catch(() => alert("Could not fetch stats. Check API Key or Network."));
+    }
+  };
   return (
     <footer
       id="contact"
@@ -59,18 +76,16 @@ const Footer = () => {
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Udhgam. All rights reserved.
             </p>
-            <div 
-              className="group flex items-center gap-2 text-sm text-gray-400 font-medium cursor-help transition-all duration-300 ease-out hover:text-gray-300"
-              title="Built by Dhruval"
-            >
-              <span className="transition-transform duration-300 group-hover:-translate-y-px">
-                Made with
+            <div className="flex items-center gap-2 text-sm text-gray-400 font-medium select-none">
+              <span title='made by dhruval'>Made with</span>
+              <Heart size={14} className="text-red-500" fill="currentColor" />
+              <span 
+                onClick={handleSecretClick}
+                className="ml-1 opacity-20 hover:opacity-100 transition-opacity duration-300 text-[10px] cursor-pointer hover:text-purple-400"
+                title="made by dhruval"
+              >
+                ~ D
               </span>
-
-              <Heart 
-                size={14} 
-                className="text-red-500 fill-current transition-transform duration-300 ease-out group-hover:scale-110"
-              />
             </div>
           </div>
           <div className="lg:col-span-5 flex flex-col gap-3">
