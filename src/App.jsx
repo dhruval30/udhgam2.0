@@ -15,7 +15,7 @@ function App() {
 
     if (!hasVisited) {
       storageType.setItem('udhgam_visit_counted', 'true');
-      fetch('https://api.counterapi.dev/v2/dhruval-padias-team-2232/first-counter-2232/up')
+      fetch('https://api.counterapi.dev/v2/dhruval-padias-team-2232/production/up')
         .then(response => {
            if (!response.ok) throw new Error("Network response was not ok");
            return response.json();
