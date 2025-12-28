@@ -142,7 +142,7 @@ import React, { useEffect, useRef, useState } from 'react';
                       </span>
                   </h2>
                   <p className="text-lg text-gray-400 mt-6 font-medium leading-relaxed">
-                     We have packed the schedule. From hard-core coding to neon painting, pick your vibe.
+                     The wait is finally over! We have curated some really cool and challenging contests for you. From tech heavy contests to fun filled activities, there's something for everyone.
                   </p>
               </div>
   
@@ -273,7 +273,7 @@ import React, { useEffect, useRef, useState } from 'react';
                   <div className="flex items-center justify-between p-6 md:p-8 border-b border-white/10 bg-black/50">
                       <div>
                           <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter">Full Lineup</h2>
-                          <p className="text-xs md:text-sm text-gray-400 mt-1">Every single event happening at Udhgam 2.0</p>
+                          <p className="text-xs md:text-sm text-gray-400 mt-1">Registrations Opening Soon!</p>
                       </div>
                       <button 
                           onClick={() => setIsModalOpen(false)}
