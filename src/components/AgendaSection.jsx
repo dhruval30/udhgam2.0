@@ -217,7 +217,7 @@ import React, { useEffect, useRef, useState } from 'react';
                                       <div 
                                           key={event.id}
                                           className={`
-                                              w-[85vw] sm:w-[320px] md:w-[320px] h-[240px] 
+                                              w-[85vw] sm:w-[320px] md:w-[320px] h-60 
                                               group relative p-6 rounded-3xl bg-[#111] border border-white/10 ${event.borderColor} 
                                               transition-all duration-300 hover:bg-[#161616] flex flex-col gap-4 
                                               snap-center md:snap-start
