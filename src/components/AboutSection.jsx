@@ -1,5 +1,6 @@
 import { ArrowUpRight, Calendar, MapPin } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   return (
@@ -70,9 +71,12 @@ const AboutSection = () => {
                                 </h3>
                                 <p className="text-xs sm:text-sm font-semibold text-gray-600 mt-2 sm:mt-3">Shape the future.</p>
                             </div>
-                            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300 shrink-0">
+                            <Link 
+                                to="/partnerships" 
+                                className="w-10 h-10 sm:w-12 sm:h-12 bg-black text-white rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300 shrink-0 cursor-pointer"
+                            >
                                 <ArrowUpRight size={20} className="sm:w-6 sm:h-6" strokeWidth={2.5} />
-                            </div>
+                            </Link>
                         </div>
                         
                         <div className="mt-6 sm:mt-8">

@@ -1,5 +1,6 @@
 import { ArrowRight, Download } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PartnerSection = () => {
   return (
@@ -49,6 +50,13 @@ const PartnerSection = () => {
                     <span>Email The Team</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
+                  <Link 
+                    to="/partnerships"
+                    className="cursor-pointer flex items-center justify-between w-full p-4 bg-white/5 border border-white/10 text-white font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-white/10 transition-all duration-300 group"
+                  >
+                    <span>View Sponsorship Tiers</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             </div>

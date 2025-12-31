@@ -1,12 +1,33 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import AboutSection from './components/AboutSection';
 import AgendaSection from './components/AgendaSection';
 import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import PartnerSection from './components/PartnerSection';
+import PartnershipPage from './components/PartnershipPage';
 import SectionDivider from './components/SectionDivider';
 import Udhgam1 from './components/Udhgam1';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+const Home = () => (
+  <>
+    <LandingPage />
+    <AboutSection />
+    <AgendaSection />
+    <Udhgam1 />
+    <PartnerSection />
+    <SectionDivider />
+    <Footer />
+  </>
+);
 
 function App() {
   useEffect(() => {
@@ -30,15 +51,15 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <LandingPage />
-      <AboutSection />
-      <AgendaSection />
-      <Udhgam1 />
-      <PartnerSection />
-      <SectionDivider />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/partnerships" element={<PartnershipPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
