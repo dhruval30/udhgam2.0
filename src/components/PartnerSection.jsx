@@ -1,6 +1,7 @@
 import { ArrowRight, Download } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import sponsorshipDeck from '../assets/sponsorship.pdf';
 
 const PartnerSection = () => {
   return (
@@ -36,9 +37,9 @@ const PartnerSection = () => {
                 </div>
                 <div className="flex flex-col gap-4 mt-8">
                   <a 
-                    // href="/udhgam_sponsorship_deck.pdf"
-                    download
-                    className="flex items-center justify-between w-full p-4 bg-white text-black font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-gray-200 transition-all duration-300 group"
+                    href={sponsorshipDeck} 
+                    download="Udhgam_Sponsorship_Deck.pdf"
+                    className="cursor-pointer flex items-center justify-between w-full p-4 bg-white text-black font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-gray-200 transition-all duration-300 group"
                   >
                     <span>Download Brochure</span>
                     <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
