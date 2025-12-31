@@ -10,12 +10,12 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
             <div className="lg:col-span-7 flex flex-col gap-8 sm:gap-10 md:gap-12">
                 <div className="relative">
-                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+                    <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
                         A Movement <br/>
                         <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 via-pink-500 to-orange-500">
                             Of Ideas
                         </span> <br/>
-                        <span className="italic font-serif font-light text-white/40 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">&</span> Impact.
+                        <span className="italic font-serif font-light text-white/40 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">&</span> Impact.
                     </h2>
                     
                     {/* Sticker badge */}
@@ -43,7 +43,7 @@ const AboutSection = () => {
                                 <Calendar size={16} className="sm:w-[18px] sm:h-[18px]" />
                                 <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase">Event Dates</span>
                             </div>
-                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+                            <h3 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
                                 3 - 5 Feb <span className="text-white/30">2026</span>
                             </h3>
                         </div>
@@ -54,7 +54,7 @@ const AboutSection = () => {
                                 <MapPin size={16} className="sm:w-[18px] sm:h-[18px]" />
                                 <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase">Location</span>
                             </div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-white">Woxsen University</h3>
+                            <h3 className="text-lg sm:text-2xl font-bold text-white">Woxsen University</h3>
                             <p className="text-sm sm:text-base text-gray-400">Hyderabad, India</p>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const AboutSection = () => {
                     <div className="relative bg-white h-full rounded-2xl sm:rounded-[22px] p-6 sm:p-7 md:p-8 flex flex-col justify-between group-hover:bg-gray-50 transition-all">
                         <div className="flex justify-between items-start gap-4">
                             <div>
-                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter text-black">
+                                <h3 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase leading-none tracking-tighter text-black">
                                     Partner<br/>With Us
                                 </h3>
                                 <p className="text-xs sm:text-sm font-semibold text-gray-600 mt-2 sm:mt-3">Shape the future.</p>

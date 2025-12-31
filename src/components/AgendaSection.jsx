@@ -123,7 +123,7 @@ import React, { useEffect, useRef, useState } from 'react';
     }, [isModalOpen]);
   
     return (
-      <section id="agenda" className="relative w-full bg-black text-white py-20 md:py-24 px-0 md:px-12 overflow-hidden">
+      <section id="agenda" className="relative w-full bg-black text-white py-10 md:py-24 px-0 md:px-12 overflow-hidden">
         
         {/* Background Blurs */}
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none"></div>
@@ -135,13 +135,13 @@ import React, { useEffect, useRef, useState } from 'react';
             {/* LEFT COLUMN: Sticky Header & Info */}
             <div className="lg:col-span-4 flex flex-col gap-8 order-1 lg:sticky lg:top-24 px-6 md:px-0">
               <div>
-                  <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8]">
+                  <h2 className="text-4xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8]">
                       The <br/>
                       <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 via-pink-500 to-orange-500">
                           Tracks
                       </span>
                   </h2>
-                  <p className="text-lg text-gray-400 mt-6 font-medium leading-relaxed">
+                  <p className="text-sm md:text-lg text-gray-400 mt-4 md:mt-6 font-medium leading-relaxed">
                      The wait is finally over! We have curated some really cool and challenging contests for you. From tech heavy contests to fun filled activities, there's something for everyone.
                   </p>
               </div>
@@ -149,7 +149,7 @@ import React, { useEffect, useRef, useState } from 'react';
               <div className="p-6 rounded-3xl bg-[#111] border border-white/10 relative overflow-hidden group">
                   <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
-                      <h4 className="text-xl font-black uppercase mb-2">Registrations Opening Soon</h4>
+                      <h4 className="text-lg md:text-xl font-black uppercase mb-2">Registrations Opening Soon</h4>
                       <p className="text-xs text-gray-400 mb-4">
                       </p>
                       <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-purple-400">
@@ -272,7 +272,7 @@ import React, { useEffect, useRef, useState } from 'react';
                   
                   <div className="flex items-center justify-between p-6 md:p-8 border-b border-white/10 bg-black/50">
                       <div>
-                          <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter">Full Lineup</h2>
+                          <h2 className="text-xl md:text-4xl font-black uppercase tracking-tighter">Full Lineup</h2>
                           <p className="text-xs md:text-sm text-gray-400 mt-1">Registrations Opening Soon!</p>
                       </div>
                       <button 
@@ -288,7 +288,7 @@ import React, { useEffect, useRef, useState } from 'react';
                           {eventsByCategory.map((categoryGroup) => (
                               <div key={categoryGroup.name}>
                                   <div className="flex items-center gap-4 mb-8">
-                                      <h3 className="text-xl md:text-2xl font-black uppercase tracking-widest text-white/50">{categoryGroup.name}</h3>
+                                      <h3 className="text-lg md:text-2xl font-black uppercase tracking-widest text-white/50">{categoryGroup.name}</h3>
                                       <div className="h-px flex-1 bg-white/10"></div>
                                   </div>
                                   
@@ -306,7 +306,7 @@ import React, { useEffect, useRef, useState } from 'react';
                                                       {event.category}
                                                   </span>
                                               </div>
-                                              <h4 className="text-lg md:text-xl font-bold text-white mb-2">{event.title}</h4>
+                                              <h4 className="text-base md:text-xl font-bold text-white mb-2">{event.title}</h4>
                                               <p className="text-xs md:text-sm text-gray-400 leading-relaxed">{event.desc}</p>
                                           </div>
                                       ))}

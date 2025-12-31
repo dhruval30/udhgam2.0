@@ -28,9 +28,9 @@ const SectionDivider = () => {
 
       <section
         id="pre-footer-divider"
-        className="relative w-full py-20 bg-black overflow-hidden"
+        className="relative w-full py-10 md:py-20 bg-black overflow-hidden"
       >
-        <div className="relative w-full flex flex-col gap-8">
+        <div className="relative w-full flex flex-col gap-4 md:gap-8">
           <div className="h-px w-full max-w-7xl mx-auto bg-linear-to-r 
           from-purple-500/0 via-purple-500/40 to-purple-500/0"></div>
           <div className="relative flex overflow-hidden">
@@ -39,13 +39,14 @@ const SectionDivider = () => {
                 <div
                   key={idx}
                   aria-hidden={idx > 0}
-                  className="flex items-center gap-10 px-5"
+                  className="flex items-center gap-6 md:gap-10 px-5"
                 >
                   {messages.map((msg, i) => (
                     <span
                       key={i}
                       className={
-                        "text-4xl font-black uppercase tracking-tighter" +
+                        // Reduced text-4xl to text-2xl on mobile
+                        "text-2xl md:text-4xl font-black uppercase tracking-tighter" +
                         (msg.includes("REGISTER")
                           ? " text-transparent bg-clip-text bg-linear-to-r from-purple-500 via-pink-500 to-orange-500 opacity-30"
                           : " text-white/10")
