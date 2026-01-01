@@ -1,22 +1,22 @@
 import {
-  ArrowLeft,
-  ArrowRight,
-  ArrowUpRight,
-  Bot,
-  Brain,
-  CheckCircle2,
-  Clock,
-  Code,
-  Database,
-  Download,
-  Eye,
-  Globe,
-  Mail,
-  Music,
-  Phone,
-  Sparkles,
-  Users,
-  Zap
+    ArrowLeft,
+    ArrowRight,
+    ArrowUpRight,
+    Bot,
+    Brain,
+    CheckCircle2,
+    Clock,
+    Code,
+    Database,
+    Download,
+    Eye,
+    Globe,
+    Mail,
+    Music,
+    Phone,
+    Sparkles,
+    Users,
+    Zap
 } from 'lucide-react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -174,7 +174,7 @@ const PartnershipPage = () => {
                 
                 <div className="flex flex-col md:flex-row md:items-end justify-between w-full gap-8 md:gap-16 border-l-2 border-white/20 pl-4 md:pl-8 mt-2 md:mt-4">
                     <p className="text-sm md:text-xl text-gray-300 font-medium leading-relaxed max-w-2xl">
-                        Udhgam 2.0 isn't just a fest; it's a convergence of India's brightest engineering & design minds. 
+                        Udhgam 2.0 isn't just a fest; it's a convergence of India's brightest minds. 
                         Partner with us to position your brand at the forefront of innovation.
                     </p>
                     
