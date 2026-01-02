@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import PartnerSection from './components/PartnerSection';
 import PartnershipPage from './components/PartnershipPage';
+import PastEditionPage from './components/PastEditionPage';
 import SectionDivider from './components/SectionDivider';
 import Udhgam1 from './components/Udhgam1';
 
@@ -57,6 +58,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/partnerships" element={<PartnershipPage />} />
+          <Route path="/past" element={<PastEditionPage />} /> 
         </Routes>
       </div>
     </BrowserRouter>

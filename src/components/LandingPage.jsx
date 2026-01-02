@@ -1,6 +1,6 @@
-import { ArrowRight, Instagram, Linkedin, Menu, X } from 'lucide-react';
-
+import { ArrowRight, History, Instagram, Linkedin, Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const BG_IMAGE_PATH = '/bg.png';
 const MAIN_CENTER_LOGO = '/udhgam2.0.png';
@@ -10,6 +10,7 @@ const SMALL_EVENT_LOGO = '/udhgam-small.png';
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Kept exactly as it was: these will scroll to #IDs on the home page
   const menuItems = ['About', 'Agenda', 'Udhgam 1.0', 'Partner with us', 'Contact'];
 
   return (
@@ -33,6 +34,7 @@ const LandingPage = () => {
           <img src={SMALL_EVENT_LOGO} alt="Event Logo" className="hidden md:block h-16 object-contain" />
         </div>
 
+        {/* Desktop Menu - SCROLLS TO SECTIONS */}
         <div className="hidden md:flex items-center gap-10 text-[11px] font-bold tracking-[0.2em] text-gray-300 uppercase">
           {menuItems.map((item) => (
             <a 
@@ -46,6 +48,15 @@ const LandingPage = () => {
         </div>
 
         <div className="flex items-center gap-4">
+            {/* NEW BUTTON: LINKS TO /PAST PAGE */}
+            <Link 
+              to="/past" 
+              className="hidden md:flex items-center gap-2 px-5 py-2 border border-white/30 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 font-bold text-xs tracking-widest uppercase"
+            >
+                <History size={14} />
+                <span>Rewind</span>
+            </Link>
+
             <a href="#register" className="hidden md:flex items-center gap-2 px-6 py-2 bg-white text-black hover:bg-gray-200 transition-all duration-300 font-bold text-xs tracking-widest uppercase">
                 <span>Register</span>
                 <ArrowRight size={14} />
@@ -57,6 +68,7 @@ const LandingPage = () => {
         </div>
       </nav>
 
+      {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-60 bg-black transition-transform duration-300 flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between items-center p-6 border-b border-white/10">
             <img src={UNI_LOGO_PATH} alt="University Logo" className="h-8 object-contain" />
@@ -66,6 +78,16 @@ const LandingPage = () => {
         </div>
 
         <div className="flex flex-col px-8 py-8 gap-6 overflow-y-auto">
+            {/* Added Rewind Link to Mobile Menu */}
+            <Link 
+                to="/past"
+                onClick={() => setIsMenuOpen(false)}
+                className="group flex justify-between items-center text-2xl font-bold text-purple-400 tracking-wide uppercase border-b border-white/5 pb-4"
+            >
+                <span className="flex items-center gap-3"><History size={24}/> Rewind 1.0</span>
+                <ArrowRight className="text-purple-400/50 group-hover:text-purple-400 group-hover:translate-x-2 transition-all" size={24} />
+            </Link>
+
             {menuItems.map((item) => (
                 <a 
                     key={item} 
@@ -80,9 +102,6 @@ const LandingPage = () => {
         </div>
 
         <div className="mt-auto px-8 pb-12">
-            {/* <p className="text-xs font-bold text-gray-500 uppercase mb-4 tracking-widest">Connect with us</p> */}
-            <div className="mt-auto px-8 pb-12">
-
             <div className="flex border border-white/20 divide-x divide-white/20">
               <a
                 href="https://www.instagram.com/udhgam2025/"
@@ -103,9 +122,9 @@ const LandingPage = () => {
               </a>
             </div>
           </div>
-        </div>
       </div>
 
+      {/* Social Sidebar (Desktop) */}
       <div className="absolute left-8 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-0">
         <a
           href="https://www.instagram.com/udhgam2025/"
@@ -126,6 +145,7 @@ const LandingPage = () => {
         </a>
       </div>
 
+      {/* Right Side Date Info */}
       <div className="absolute z-30 top-20 right-6 flex flex-col items-end text-right md:top-1/2 md:right-12 md:-translate-y-1/2">
         
         <h3 className="text-[8px] md:text-[10px] font-bold tracking-[0.2em] md:tracking-[0.3em] text-white mb-1 md:mb-2 uppercase drop-shadow-md">
@@ -150,6 +170,7 @@ const LandingPage = () => {
         </div>
       </div>
 
+      {/* Main Center Logo */}
       <main className="absolute inset-0 z-20 flex flex-col justify-end items-center px-4 pb-48 md:justify-center md:pb-0">
         <div className="relative w-full max-w-[260px] md:max-w-[900px]">
           <img
@@ -160,6 +181,7 @@ const LandingPage = () => {
         </div>
       </main>
 
+      {/* Mobile Bottom CTA */}
       <div className="md:hidden absolute bottom-24 left-6 right-6 z-40">
         <a href="#register" className="flex items-center justify-center w-full h-14 bg-linear-to-r from-[#E60000] to-[#4A00E0] text-white font-bold tracking-[0.2em] text-sm uppercase shadow-2xl shadow-purple-900/50">
             Register Now
