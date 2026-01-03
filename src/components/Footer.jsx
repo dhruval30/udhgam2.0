@@ -86,7 +86,7 @@ const Footer = () => {
                 <Heart size={12} className="text-red-500 md:w-3.5 md:h-3.5" fill="currentColor" />
                 <span 
                     onClick={handleSecretClick}
-                    className="ml-1 opacity-20 hover:opacity-100 transition-opacity duration-300 text-[10px] cursor-pointer hover:text-purple-400"
+                    className="ml-1 opacity-40 hover:opacity-100 transition-opacity duration-300 text-[10px] cursor-pointer hover:text-purple-400"
                     title="made by dhruval"
                 >
                     ~ by dhruval
