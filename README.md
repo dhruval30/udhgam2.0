@@ -1,6 +1,4 @@
-To write a README for this project, I have analyzed the codebase structure, the tech stack used, and the specific event details for Udhgam 2.0. This README reflects the current state of the repository, including the recently added past edition archives.
-
-# Udhgam 2.0 Web Portal
+# Udhgam 2.0
 
 This is the official website for Udhgam 2.0, the tech fest of Woxsen University scheduled for February 2026. The project is a React-based web application designed to handle event promotion, registrations, and legacy archives.
 
@@ -62,3 +60,5 @@ The project requires the following keys in a .env file to function correctly:
 ## Notes
 
 The project uses a dark theme by default with high-contrast gradients. Images for the past edition are stored in /public/past/ and should maintain their original aspect ratios to fit the bento grid correctly.
+
+Built by Dhruval
