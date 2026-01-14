@@ -37,10 +37,10 @@ import React, { useEffect, useRef, useState } from 'react';
   
     const events = [
       // --- FLAGSHIP EVENTS ---
-      { id: "f1", category: "Flagship", title: "Tensor v2.0", desc: "The main event. 24-hour hackathon. You, your team, and a problem statement. No sleep, just shipping code.", icon: Code, color: "text-purple-400", borderColor: "group-hover:border-purple-500/50" },
-      { id: "f2", category: "Flagship", title: "AgentX", desc: "AI Agents are taking over. Build autonomous systems that can think, act, and solve problems on their own.", icon: Bot, color: "text-cyan-400", borderColor: "group-hover:border-cyan-500/50" },
+      { id: "f1", category: "Flagship", title: "Tensor v2.0", desc: "The main event. 24-hour hackathon. You, your team, and a problem statement. No sleep, just shipping code.", icon: Code, color: "text-purple-400", borderColor: "group-hover:border-purple-500/50", href: "https://unstop.com/hackathons/tensor-v20-24-hour-hackathon-udhgam-20-woxsen-university-hyderabad-1622299"},
+      { id: "f2", category: "Flagship", title: "AgentX", desc: "AI Agents are taking over. Build autonomous systems that can think, act, and solve problems on their own.", icon: Bot, color: "text-cyan-400", borderColor: "group-hover:border-cyan-500/50", href: "https://unstop.com/competitions/agentx-agentic-development-competition-udhgam-20-woxsen-university-hyderabad-1622320" },
       { id: "f3", category: "Flagship", title: "ML Challenge", desc: "Pure data science. Train your models, improve your accuracy, and beat the benchmark.", icon: Brain, color: "text-pink-400", borderColor: "group-hover:border-pink-500/50" },
-      { id: "f4", category: "Flagship", title: "DataVerse", desc: "A datathon for the visualization wizards. Turn boring datasets into compelling stories.", icon: Database, color: "text-blue-400", borderColor: "group-hover:border-blue-500/50" },
+      { id: "f4", category: "Flagship", title: "DataVerse", desc: "A datathon for the visualization wizards. Turn boring datasets into compelling stories.", icon: Database, color: "text-blue-400", borderColor: "group-hover:border-blue-500/50", href: "https://unstop.com/hackathons/dataverse-udhgam-20-woxsen-university-hyderabad-1622457" },
   
       // --- TECHNICAL ---
       { id: "t1", category: "Technical", title: "Product Pitch", desc: "Shark Tank style pitching. Sell your idea to investors who won't hold back.", icon: Presentation, color: "text-green-400", borderColor: "group-hover:border-green-500/50" },
@@ -146,18 +146,22 @@ import React, { useEffect, useRef, useState } from 'react';
                   </p>
               </div>
   
-              <div className="p-6 rounded-3xl bg-[#111] border border-white/10 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                      <h4 className="text-lg md:text-xl font-black uppercase mb-2">Registrations Opening Soon</h4>
-                      <p className="text-xs text-gray-400 mb-4">
-                      </p>
-                      <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-purple-400">
-                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
-                          Stay tuned!
-                      </div>
-                  </div>
-              </div>
+
+<div className="p-6 rounded-3xl bg-[#111] border border-white/10 relative overflow-hidden group">
+  <div className="absolute inset-0 bg-linear-to-br from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+  <div className="relative z-10">
+    <a
+      href="#register"
+      className="inline-block text-lg md:text-xl font-black uppercase mb-2 hover:text-purple-400 transition-colors duration-300"
+    >
+      Registrations Live!
+    </a>
+
+    <p className="text-xs text-gray-400 mb-4">
+    </p>
+  </div>
+</div>
   
               <div className="hidden lg:flex items-center gap-2 text-xs text-gray-500 font-mono opacity-50">
                   <span>// SCROLL RIGHT FOR MORE</span>
@@ -227,7 +231,18 @@ import React, { useEffect, useRef, useState } from 'react';
                                               <div className={`w-10 h-10 rounded-xl bg-black border border-white/10 flex items-center justify-center shrink-0 ${event.color} group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-900/10`}>
                                                   <event.icon size={20} />
                                               </div>
-                                              <ArrowUpRight className="text-white/20 group-hover:text-white transition-colors" size={18} />
+					  {event.href && (
+						  <a
+						  href={event.href}
+						  target="_blank"
+						  rel="noopener noreferrer"
+						  className="text-white/20 group-hover:text-white transition-colors"
+						  aria-label={`Open ${event.title} registration`}
+						  >
+						  <ArrowUpRight size={18} />
+						  </a>
+					  )}
+
                                           </div>
   
                                           <div className="flex-1 flex flex-col justify-between">
