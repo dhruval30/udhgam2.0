@@ -64,7 +64,7 @@ const Footer = () => {
               <h3 className="text-[10px] md:text-xs font-bold tracking-[0.25em] uppercase text-purple-400 mb-2">Stalk Us</h3>
               <div className="flex flex-col gap-1">
                 <a href="https://www.instagram.com/udhgam2025/" className="text-sm md:text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.linkedin.com/posts/woxsen-university_udhgam-activity-7295649138023534592-Fss3/" className="text-sm md:text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.linkedin.com/company/udhgam" className="text-sm md:text-lg text-gray-200 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </div>
             </div>
           </div>

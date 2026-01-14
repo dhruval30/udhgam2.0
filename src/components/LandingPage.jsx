@@ -57,7 +57,7 @@ const LandingPage = () => {
                 <span>Rewind</span>
             </Link>
 
-            <a href="#register" className="hidden md:flex items-center gap-2 px-6 py-2 bg-white text-black hover:bg-gray-200 transition-all duration-300 font-bold text-xs tracking-widest uppercase">
+            <a href="https://unstop.com/college-fests/udhgam-20-woxsen-university-hyderabad-432967" className="hidden md:flex items-center gap-2 px-6 py-2 bg-white text-black hover:bg-gray-200 transition-all duration-300 font-bold text-xs tracking-widest uppercase">
                 <span>Register</span>
                 <ArrowRight size={14} />
             </a>
@@ -136,7 +136,7 @@ const LandingPage = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/posts/woxsen-university_udhgam-activity-7295649138023534592-Fss3/"
+          href="https://www.linkedin.com/company/udhgam"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 flex items-center justify-center border border-white/20 text-white/60 hover:bg-white hover:text-black hover:border-white transition-all duration-300"
@@ -183,7 +183,7 @@ const LandingPage = () => {
 
       {/* Mobile Bottom CTA */}
       <div className="md:hidden absolute bottom-24 left-6 right-6 z-40">
-        <a href="#register" className="flex items-center justify-center w-full h-14 bg-linear-to-r from-[#E60000] to-[#4A00E0] text-white font-bold tracking-[0.2em] text-sm uppercase shadow-2xl shadow-purple-900/50">
+        <a href="https://unstop.com/college-fests/udhgam-20-woxsen-university-hyderabad-432967" className="flex items-center justify-center w-full h-14 bg-linear-to-r from-[#E60000] to-[#4A00E0] text-white font-bold tracking-[0.2em] text-sm uppercase shadow-2xl shadow-purple-900/50">
             Register Now
         </a>
       </div>
