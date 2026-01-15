@@ -46,7 +46,7 @@ const AllEventsPage = () => {
         {
             id: "f2",
             category: "Flagship",
-            title: "AgentX",
+            title: "AgentX - Agentic Development",
             desc: "Agentic AI Challenge. Build autonomous systems.",
             icon: Bot,
             color: "group-hover:text-cyan-400",
@@ -95,7 +95,7 @@ const AllEventsPage = () => {
         {
             id: "t3",
             category: "Technical",
-            title: "Poster Pres.",
+            title: "Poster Presentation",
             desc: "Academic research. Visual communication.",
             icon: Layers,
             color: "group-hover:text-yellow-400",
@@ -191,7 +191,7 @@ const AllEventsPage = () => {
         {
             id: "x2",
             category: "Carnival",
-            title: "Glow Painting",
+            title: "Glow in the Dark Painting",
             desc: "UV Lights. Fluorescent paints. Creative darkroom.",
             icon: Palette,
             color: "group-hover:text-lime-400",
@@ -229,7 +229,7 @@ const AllEventsPage = () => {
         {
             id: "x6",
             category: "Carnival",
-            title: "Origami + Math",
+            title: "Origami + Math Art",
             desc: "Geometry. Paper art. Precision design.",
             icon: Layers,
             color: "group-hover:text-orange-400",
@@ -239,7 +239,7 @@ const AllEventsPage = () => {
         {
             id: "x7",
             category: "Carnival",
-            title: "Upcycled Fashion",
+            title: "Upcycled: Sustainability Fashion Show",
             desc: "Sustainability. Fashion. Repurposed materials.",
             icon: Scissors,
             color: "group-hover:text-teal-400",
@@ -249,7 +249,7 @@ const AllEventsPage = () => {
         {
             id: "x8",
             category: "Carnival",
-            title: "Best Out of Waste",
+            title: "Repurpose: Best Out of Waste",
             desc: "Create. Build. Repurpose discarded materials.",
             icon: Ghost,
             color: "group-hover:text-green-500",
