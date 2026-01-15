@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import AboutSection from './components/AboutSection';
 import AgendaSection from './components/AgendaSection';
+import AllEventsPage from './components/AllEventsPage';
 import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import PartnerSection from './components/PartnerSection';
@@ -59,6 +60,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/partnerships" element={<PartnershipPage />} />
           <Route path="/past" element={<PastEditionPage />} /> 
+          <Route path="/allevents" element={<AllEventsPage />} />
         </Routes>
       </div>
     </BrowserRouter>
