@@ -7,7 +7,6 @@ import {
     Code,
     Cpu,
     Database,
-    FlaskConical,
     Gamepad2,
     Ghost,
     Layers,
@@ -36,42 +35,226 @@ import React, { useEffect, useRef, useState } from 'react';
     const categories = ["Flagship", "Technical", "Speakers", "Cultural", "Carnival"];
   
     const events = [
-      // --- FLAGSHIP EVENTS ---
-      { id: "f1", category: "Flagship", title: "Tensor v2.0", desc: "The main event. 24-hour hackathon. You, your team, and a problem statement. No sleep, just shipping code.", icon: Code, color: "text-purple-400", borderColor: "group-hover:border-purple-500/50", href: "https://unstop.com/hackathons/tensor-v20-24-hour-hackathon-udhgam-20-woxsen-university-hyderabad-1622299"},
-      { id: "f2", category: "Flagship", title: "AgentX", desc: "AI Agents are taking over. Build autonomous systems that can think, act, and solve problems on their own.", icon: Bot, color: "text-cyan-400", borderColor: "group-hover:border-cyan-500/50", href: "https://unstop.com/competitions/agentx-agentic-development-competition-udhgam-20-woxsen-university-hyderabad-1622320" },
-      { id: "f3", category: "Flagship", title: "ML Challenge", desc: "Pure data science. Train your models, improve your accuracy, and beat the benchmark.", icon: Brain, color: "text-pink-400", borderColor: "group-hover:border-pink-500/50" },
-      { id: "f4", category: "Flagship", title: "DataVerse", desc: "A datathon for the visualization wizards. Turn boring datasets into compelling stories.", icon: Database, color: "text-blue-400", borderColor: "group-hover:border-blue-500/50", href: "https://unstop.com/hackathons/dataverse-udhgam-20-woxsen-university-hyderabad-1622457" },
-  
-      // --- TECHNICAL ---
-      { id: "t1", category: "Technical", title: "Product Pitch", desc: "Shark Tank style pitching. Sell your idea to investors who won't hold back.", icon: Presentation, color: "text-green-400", borderColor: "group-hover:border-green-500/50" },
-      { id: "t2", category: "Technical", title: "Prototype Presentation", desc: "Don't just talk about it, show it working. Hardware, software, or barely holding together.", icon: Cpu, color: "text-orange-400", borderColor: "group-hover:border-orange-500/50" },
-      { id: "t3", category: "Technical", title: "Poster Presentation", desc: "Academic rigor meets visual storytelling. Defend your research.", icon: Layers, color: "text-yellow-400", borderColor: "group-hover:border-yellow-500/50" },
-      { id: "t4", category: "Technical", title: "Tech Debate", desc: "Fight with logic. Controversial tech topics, two sides, and a moderator who loves chaos.", icon: Users, color: "text-red-400", borderColor: "group-hover:border-red-500/50" },
-    //   { id: "t6", category: "Technical", title: "Event Coverage", desc: "Videography and reporting. Document the history we are making.", icon: Video, color: "text-zinc-400", borderColor: "group-hover:border-zinc-500/50" },
-  
-      // --- SPEAKERS ---
-      { id: "s1", category: "Speakers", title: "TEDx Talks", desc: "Ideas worth spreading. Short, powerful, and actually interesting.", icon: Mic, color: "text-red-500", borderColor: "group-hover:border-red-500/50" },
-      { id: "s2", category: "Speakers", title: "Panel Discussions", desc: "Unscripted conversations with industry leaders. No corporate fluff.", icon: Users, color: "text-purple-400", borderColor: "group-hover:border-purple-500/50" },
-      { id: "s3", category: "Speakers", title: "Guest Mentorship", desc: "1:1 sessions with builders. Come prepared with questions.", icon: Rocket, color: "text-blue-400", borderColor: "group-hover:border-blue-500/50" },
-      { id: "s4", category: "Speakers", title: "Industry Booths", desc: "Jobs, internships, and free swag. Network like your career depends on it.", icon: ShoppingBag, color: "text-emerald-400", borderColor: "group-hover:border-emerald-500/50" },
-  
-      // --- CULTURAL ---
-      { id: "c1", category: "Cultural", title: "Regional Dance", desc: "High energy, local beats. A performance that wakes you up.", icon: Music, color: "text-rose-400", borderColor: "group-hover:border-rose-500/50" },
-      { id: "c2", category: "Cultural", title: "Faculty Games", desc: "See your professors in a way you definitely won't see in class.", icon: Smile, color: "text-yellow-400", borderColor: "group-hover:border-yellow-500/50" },
-      { id: "c3", category: "Cultural", title: "Fun Games", desc: "When your code breaks, come here to blow off steam.", icon: Gamepad2, color: "text-green-400", borderColor: "group-hover:border-green-500/50" },
-      { id: "c4", category: "Cultural", title: "Memory Lane", desc: "A nostalgic trip through the history of Udhgam.", icon: Ghost, color: "text-gray-400", borderColor: "group-hover:border-gray-500/50" },
-  
-      // --- CARNIVAL ---
-      { id: "t5", category: "Carnival", title: "Photography Challenge", desc: "Capture the madness. Best shots of the fest get featured.", icon: Camera, color: "text-indigo-400", borderColor: "group-hover:border-indigo-500/50" },
-      { id: "x1", category: "Carnival", title: "Nitrogen Ice Cream", desc: "Chemistry you can eat. Flash-frozen right in front of you.", icon: FlaskConical, color: "text-cyan-300", borderColor: "group-hover:border-cyan-500/50" },
-      { id: "x2", category: "Carnival", title: "Glow Painting", desc: "Dark room, neon paints. Create art that literally shines.", icon: Palette, color: "text-lime-400", borderColor: "group-hover:border-lime-500/50" },
-      { id: "x3", category: "Carnival", title: "VR Experience", desc: "Reality is boring. Put on the headset and go somewhere else.", icon: Atom, color: "text-purple-400", borderColor: "group-hover:border-purple-500/50" },
-      { id: "x4", category: "Carnival", title: "Slime Booth", desc: "Sticky, messy, and oddly satisfying.", icon: Zap, color: "text-pink-400", borderColor: "group-hover:border-pink-500/50" },
-      { id: "x5", category: "Carnival", title: "Mystery Room", desc: "Locked in. Puzzles everywhere. You have to logic your way out.", icon: Puzzle, color: "text-red-400", borderColor: "group-hover:border-red-500/50" },
-      { id: "x6", category: "Carnival", title: "Origami + Math", desc: "Fold complex structures and look smart doing it.", icon: Layers, color: "text-orange-400", borderColor: "group-hover:border-orange-500/50" },
-      { id: "x7", category: "Carnival", title: "DIY Workshop", desc: "Badge making, keychain crafting. Take something home.", icon: Scissors, color: "text-teal-400", borderColor: "group-hover:border-teal-500/50" },
-      { id: "x8", category: "Carnival", title: "Best Out of Waste", desc: "Trash to treasure. Creativity test using recycled materials.", icon: Ghost, color: "text-green-500", borderColor: "group-hover:border-green-500/50" }
-    ];
+        // --- FLAGSHIP EVENTS ---
+        { 
+          id: "f1", 
+          category: "Flagship", 
+          title: "Tensor v2.0", 
+          desc: "A 24-hour hackathon focused on solving real problems through code, collaboration, and innovation.", 
+          icon: Code, 
+          color: "text-purple-400", 
+          borderColor: "group-hover:border-purple-500/50", 
+          href: "https://unstop.com/hackathons/tensor-v20-24-hour-hackathon-udhgam-20-woxsen-university-hyderabad-1622299"
+        },
+        { 
+          id: "f2", 
+          category: "Flagship", 
+          title: "AgentX", 
+          desc: "An agentic development challenge focused on building autonomous AI systems that can reason and act independently.", 
+          icon: Bot, 
+          color: "text-cyan-400", 
+          borderColor: "group-hover:border-cyan-500/50", 
+          href: "https://unstop.com/competitions/agentx-agentic-development-competition-udhgam-20-woxsen-university-hyderabad-1622320" 
+        },
+        { 
+          id: "f3", 
+          category: "Flagship", 
+          title: "ML Challenge", 
+          desc: "A competitive machine learning challenge focused on model performance, optimization, and real-world datasets.", 
+          icon: Brain, 
+          color: "text-pink-400", 
+          borderColor: "group-hover:border-pink-500/50" 
+        },
+        { 
+          id: "f4", 
+          category: "Flagship", 
+          title: "DataVerse", 
+          desc: "A datathon centered on data analysis and visualization, turning insights into impactful stories.", 
+          icon: Database, 
+          color: "text-blue-400", 
+          borderColor: "group-hover:border-blue-500/50", 
+          href: "https://unstop.com/hackathons/dataverse-udhgam-20-woxsen-university-hyderabad-1622457" 
+        },
+      
+        // --- TECHNICAL ---
+        { 
+          id: "t1", 
+          category: "Technical", 
+          title: "Product Pitch", 
+          desc: "A startup-style pitching event where teams present ideas to a panel of industry professionals.", 
+          icon: Presentation, 
+          color: "text-green-400", 
+          borderColor: "group-hover:border-green-500/50" 
+        },
+        { 
+          id: "t2", 
+          category: "Technical", 
+          title: "Prototype Presentation", 
+          desc: "Showcase working prototypes across hardware, software, and integrated systems.", 
+          icon: Cpu, 
+          color: "text-orange-400", 
+          borderColor: "group-hover:border-orange-500/50" 
+        },
+        { 
+          id: "t3", 
+          category: "Technical", 
+          title: "Poster Presentation", 
+          desc: "A platform to present academic and technical research through well-structured visual communication.", 
+          icon: Layers, 
+          color: "text-yellow-400", 
+          borderColor: "group-hover:border-yellow-500/50" 
+        },
+        { 
+          id: "t4", 
+          category: "Technical", 
+          title: "Tech Debate", 
+          desc: "Structured debates on emerging technology topics, judged on clarity, logic, and perspective.", 
+          icon: Users, 
+          color: "text-red-400", 
+          borderColor: "group-hover:border-red-500/50" 
+        },
+      
+        // --- SPEAKERS ---
+        { 
+          id: "s1", 
+          category: "Speakers", 
+          title: "WoxTalks", 
+          desc: "Short-format talks by industry professionals and innovators sharing real-world insights.", 
+          icon: Mic, 
+          color: "text-red-500", 
+          borderColor: "group-hover:border-red-500/50" 
+        },
+        { 
+          id: "s2", 
+          category: "Speakers", 
+          title: "Panel Discussions", 
+          desc: "Open conversations with leaders from tech and business on trends shaping the future.", 
+          icon: Users, 
+          color: "text-purple-400", 
+          borderColor: "group-hover:border-purple-500/50" 
+        },
+        { 
+          id: "s3", 
+          category: "Speakers", 
+          title: "Guest Mentorship", 
+          desc: "One-on-one mentoring sessions with experienced professionals across domains.", 
+          icon: Rocket, 
+          color: "text-blue-400", 
+          borderColor: "group-hover:border-blue-500/50" 
+        },
+        { 
+          id: "s4", 
+          category: "Speakers", 
+          title: "Industry Booths", 
+          desc: "Company showcases featuring opportunities for internships, jobs, and collaborations.", 
+          icon: ShoppingBag, 
+          color: "text-emerald-400", 
+          borderColor: "group-hover:border-emerald-500/50" 
+        },
+      
+        // --- CULTURAL ---
+        { 
+          id: "c1", 
+          category: "Cultural", 
+          title: "Regional Dance", 
+          desc: "Live performances celebrating culture, rhythm, and expression.", 
+          icon: Music, 
+          color: "text-rose-400", 
+          borderColor: "group-hover:border-rose-500/50" 
+        },
+        { 
+          id: "c2", 
+          category: "Cultural", 
+          title: "Faculty Games", 
+          desc: "Light-hearted competitive activities featuring faculty members.", 
+          icon: Smile, 
+          color: "text-yellow-400", 
+          borderColor: "group-hover:border-yellow-500/50" 
+        },
+        { 
+          id: "c3", 
+          category: "Cultural", 
+          title: "Fun Games", 
+          desc: "Casual games and activities designed for relaxation and interaction.", 
+          icon: Gamepad2, 
+          color: "text-green-400", 
+          borderColor: "group-hover:border-green-500/50" 
+        },
+      
+        // --- CARNIVAL ---
+        { 
+          id: "t5", 
+          category: "Carnival", 
+          title: "Photography Challenge", 
+          desc: "Capture the best moments of the fest through your lens.", 
+          icon: Camera, 
+          color: "text-indigo-400", 
+          borderColor: "group-hover:border-indigo-500/50" 
+        },
+        { 
+          id: "x2", 
+          category: "Carnival", 
+          title: "Glow in the Dark Painting", 
+          desc: "A creative space using fluorescent paints under UV lighting.", 
+          icon: Palette, 
+          color: "text-lime-400", 
+          borderColor: "group-hover:border-lime-500/50" 
+        },
+        { 
+          id: "x3", 
+          category: "Carnival", 
+          title: "VR Experience", 
+          desc: "Explore immersive virtual environments through interactive VR setups.", 
+          icon: Atom, 
+          color: "text-purple-400", 
+          borderColor: "group-hover:border-purple-500/50" 
+        },
+        { 
+          id: "x4", 
+          category: "Carnival", 
+          title: "Slime Booth", 
+          desc: "A hands-on activity space focused on creative play and experimentation.", 
+          icon: Zap, 
+          color: "text-pink-400", 
+          borderColor: "group-hover:border-pink-500/50" 
+        },
+        { 
+          id: "x5", 
+          category: "Carnival", 
+          title: "Mystery Room", 
+          desc: "An escape-room style challenge based on logic and teamwork.", 
+          icon: Puzzle, 
+          color: "text-red-400", 
+          borderColor: "group-hover:border-red-500/50" 
+        },
+        { 
+          id: "x6", 
+          category: "Carnival", 
+          title: "Origami + Math Art", 
+          desc: "A creative corner combining geometry, paper art, and design.", 
+          icon: Layers, 
+          color: "text-orange-400", 
+          borderColor: "group-hover:border-orange-500/50" 
+        },
+        { 
+          id: "x7", 
+          category: "Carnival", 
+          title: "Upcycled: Sustainability Fashion Show", 
+          desc: "A showcase of fashion made from recycled and repurposed materials.", 
+          icon: Scissors, 
+          color: "text-teal-400", 
+          borderColor: "group-hover:border-teal-500/50" 
+        },
+        { 
+          id: "x8", 
+          category: "Carnival", 
+          title: "Repurpose: Best Out of Waste", 
+          desc: "A creativity challenge focused on building useful items from discarded materials.", 
+          icon: Ghost, 
+          color: "text-green-500", 
+          borderColor: "group-hover:border-green-500/50" 
+        }
+      ];      
   
     const eventsByCategory = categories.map(cat => ({
       name: cat,
