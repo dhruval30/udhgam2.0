@@ -198,7 +198,8 @@ import React, { useEffect, useRef, useState } from 'react';
           desc: "A creative space using fluorescent paints under UV lighting.", 
           icon: Palette, 
           color: "text-lime-400", 
-          borderColor: "group-hover:border-lime-500/50" 
+          borderColor: "group-hover:border-lime-500/50",
+          href: "https://unstop.com/events/glow-in-the-dark-painting-udhgam-20-woxsen-university-hyderabad-1624375"
         },
         { 
           id: "x3", 
@@ -207,7 +208,8 @@ import React, { useEffect, useRef, useState } from 'react';
           desc: "Explore immersive virtual environments through interactive VR setups.", 
           icon: Atom, 
           color: "text-purple-400", 
-          borderColor: "group-hover:border-purple-500/50" 
+          borderColor: "group-hover:border-purple-500/50",
+          href: "https://unstop.com/o/VP9quXW?lb=7s3YFcgM&utm_medium=Share&utm_source=udhgahar98676&utm_campaign=Events"
         },
         { 
           id: "x4", 
@@ -234,7 +236,8 @@ import React, { useEffect, useRef, useState } from 'react';
           desc: "A creative corner combining geometry, paper art, and design.", 
           icon: Layers, 
           color: "text-orange-400", 
-          borderColor: "group-hover:border-orange-500/50" 
+          borderColor: "group-hover:border-orange-500/50",
+          href: "https://unstop.com/events/origami-math-art-udhgam-20-woxsen-university-hyderabad-1624384"
         },
         { 
           id: "x7", 
@@ -243,7 +246,8 @@ import React, { useEffect, useRef, useState } from 'react';
           desc: "A showcase of fashion made from recycled and repurposed materials.", 
           icon: Scissors, 
           color: "text-teal-400", 
-          borderColor: "group-hover:border-teal-500/50" 
+          borderColor: "group-hover:border-teal-500/50",
+          href: "https://unstop.com/events/upcycled-sustainability-fashion-show-udhgam-20-woxsen-university-hyderabad-1624359"
         },
         { 
           id: "x8", 
@@ -252,9 +256,10 @@ import React, { useEffect, useRef, useState } from 'react';
           desc: "A creativity challenge focused on building useful items from discarded materials.", 
           icon: Ghost, 
           color: "text-green-500", 
-          borderColor: "group-hover:border-green-500/50" 
+          borderColor: "group-hover:border-green-500/50",
+          href: "https://unstop.com/events/repurpose-best-out-of-waste-udhgam-20-woxsen-university-hyderabad-1623084"
         }
-      ];      
+      ];         
   
     const eventsByCategory = categories.map(cat => ({
       name: cat,
