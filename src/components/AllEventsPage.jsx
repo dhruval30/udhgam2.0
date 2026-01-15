@@ -60,7 +60,8 @@ const AllEventsPage = () => {
             desc: "Optimize models. Real-world datasets. High performance.",
             icon: Brain,
             color: "group-hover:text-pink-400",
-            glow: "group-hover:shadow-[0_0_50px_-10px_rgba(244,114,182,0.3)]"
+            glow: "group-hover:shadow-[0_0_50px_-10px_rgba(244,114,182,0.3)]",
+            href: "https://unstop.com/college-fests/udhgam-20-woxsen-university-hyderabad-432967" 
         },
         {
             id: "f4",
